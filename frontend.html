@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <title>Seeora</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url('eyeglasses2.jpg');
+      background-repeat: repeat-x;
+      background-position: no-repeat;
+      background-attachment: scroll ;
+      background-size: cover;
+      color: #333;  
+      line-height: 1.6;
+    }
+
+    p {
+        position:absolute;
+        margin-left: 80px;
+        margin-top: 10px;
+        font-family: 'Montserrat';
+        font-size: 40px;
+        font-style: italic;
+        color:#000000
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;  
+        align-items: center;             
+        padding: 20px 50px;              
+        background-color: #131313;
+        color: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+    nav {
+      padding: 0;
+      font-family: 'Montserrat';
+      margin-right: 200px;
+    }   
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        font-weight: lighter;
+        justify-content: center;
+        gap: 70px;
+        padding: 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00bcd4;
+    }
+
+    .container {
+      width: 350px;
+      height: 350px;
+      margin-top: 135px;
+      margin-left: auto;
+      margin-right: 100px;
+      margin-bottom: auto;
+      padding: 20px;
+      background-color: #131313;
+      color: #ccc;
+      border-radius: 40px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    h1 {
+      text-align: left;
+      margin-bottom: 10px;
+      margin-left: 30px;
+      font-family:'Montserrat'; font-size:50px;
+    }
+
+    form label {
+      display: block;
+      margin-top:20px;
+      margin-left: 15px;
+      font-family:'Montserrat';
+      font-size: 17px;
+    }
+
+    form input[type="email"],
+    form input[type="password"] {
+      margin-left: 15px;
+      width: 90%;
+      padding: 10px;
+      border:solid #ccc;
+      border-radius: 10px;
+    }
+
+    form input[type="submit"] {
+      display:block;
+      margin: 25px 200px 20px 70px;
+      padding: 20px 60px;
+      background-color: #f0f0f6;
+      color: rgb(0, 0, 0);
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-family: 'Montserrat'; font-size: 20px;
+      font-weight: lighter;
+      transition: background-color 0.3s;
+    }
+
+    form input[type="submit"]:hover {
+      background-color: #00bcd4;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .container {
+        margin: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Seeora</h1>
+    <nav>
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT US</a></li>
+            <li><a href="#">CONTACTS</a></li>
+        </ul>
+  </nav>
+  </header>
+
+  <p>"When style meets vision.</p>
+
+  <div class="container">
+    <form action="/action_page.php">
+      <label for="email">E-mail Address</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+
+      <input type="submit" value="Login">
+    </form>
+  </div>
+
+</body>
+</html>
