@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*base*/
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-image: url('../eyeglasses2.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #333;
+  line-height: 1.6;
+}
+
+/*header & nav*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #131313;
+  color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin: 0;
+}
+
+header h1 a.logo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+header h1 a.logo:hover {
+  transform: scale(1.05);
+  color: #fff;
+}
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 70px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #00bcd4;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s;
+}
+
+nav a:hover {
+  color: #00bcd4;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/*tagline*/
+.tagline {
+  display: inline-block;
+  transform: rotate(5deg);
+  position: absolute;
+  top: 130px;
+  left: 50px;
+  font-size: 30px;
+  font-style: italic;
+  color: #000;
+}
+
+/*ocenar*/
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  text-align: left;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+}
+
+.hero-content {
+  max-width: 600px;
+  padding: 20px;
+}
+
+.hero h2 {
+  font-size: 60px;
+  font-weight: bold;
+  color: #f3f3f3;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 30px;
+  color: #eee;
+}
+
+/*buttons*/
+.btn-cta {
+  display: inline-block;
+  padding: 15px 30px;
+  background: #00bcd4;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+  background: #fff;
+  color: #00bcd4;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,188,212,0.4);
+}
+
+/*wala na dapat to kaso nung tinanggal ko nag e-error sa may login/signup kahit merong different css*/
+.container {
+  width: 350px;
+  height: auto;
+  position: absolute;
+  top: 250px;
+  right: 50px;
+  padding: 20px;
+  background-color: #131313;
+  color: #ccc;
+  border-radius: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  text-align: left;
+  margin-bottom: 10px;
+  margin-left: 30px;
+  font-size: 50px;
+}
+
+form label {
+  display: block;
+  margin-top: 20px;
+  margin-left: 15px;
+  font-size: 17px;
+}
+
+form input[type="email"],
+form input[type="password"],
+form input[type="text"] {
+  margin-left: 15px;
+  width: 90%;
+  padding: 10px;
+  border: solid #ccc;
+  border-radius: 10px;
+}
+
+form input[type="submit"] {
+  display: block;
+  margin: 25px auto;
+  padding: 15px 40px;
+  background-color: #f0f0f6;
+  color: #000;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+  background-color: #00bcd4;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(15, 65, 73, 0.4);
+}
+
+.signup-btn {
+  display: block;
+  text-align: center;
+  margin: 15px auto 0 auto;
+  padding: 15px 40px;
+  background-color: #f0f0f6;
+  color: #000;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: lighter;
+  transition: all 0.3s ease;
+  width: 60%;
+}
+
+.signup-btn:hover {
+  background-color: #00bcd4;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 188, 212, 0.4);
+}
+
+/*homepage*/
+.featured {
+  padding: 80px 50px;
+  text-align: center;
+  background: rgba(255,255,255,0.9);
+}
+
+.section-title {
+  font-size: 36px;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.featured .grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.featured .card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.featured .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.featured img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.featured h3 {
+  margin-top: 15px;
+  font-size: 1.2rem;
+}
+
+.featured .price {
+  margin-top: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #00bcd4;
+}
+
+/*footer daw*/
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #131313;
+  color: #fff;
+  margin-top: 50px;
+}
+
+/*responsive*/
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .container {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin: 20px auto;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+}

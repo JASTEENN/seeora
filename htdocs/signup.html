@@ -1,55 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="style/signup-login.css">
-    <script type="text/javascript" src="script/validation.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="style/signup-login.css">
+  <script type="text/javascript" src="script/validation.js" defer></script>
 </head>
+
 <body>
-    <header>
-    <h1>Seeora</h1>
+  <header>
+    <h1><a href="index.html" class="logo">Seeora</a></h1>
     <nav>
       <ul>
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">ABOUT US</a></li>
-        <li><a href="#">CONTACTS</a></li>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT US</a></li>
+        <li><a href="contact.html">CONTACTS</a></li>
       </ul>
     </nav>
-</header>
-  
+  </header>
+
   <section class="hero">
     <div class="hero-content">
       <h2>Join Us for Better Vision</h2>
       <a href="../products/products.html" class="btn-cta">Shop Now</a>
     </div>
+
+    <div class="container">
+      <h1>Sign Up</h1>
+      <form id="form" method="POST">
+        <label for="firstname">First Name</label>
+        <input type="text" id="firstname-input" name="firstname" required>
+
+        <label for="lastname">Last Name</label>
+        <input type="text" id="lastname-input" name="lastname" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email-input" name="email" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password-input" name="password" required>
+
+        <label for="re-password">Confirm Password</label>
+        <input type="password" id="re-password-input" required>
+
+        <input type="submit" value="Sign Up">
+      </form>
+
+      <div id="message-box"></div>
+
+      <p class="switch-link">Already have an account? <a href="login.html">Login</a></p>
+    </div>
+
   </section>
 
-  <span class="tagline">"When style meets vision."</span>
-
-  <div class="container">
-    <form action="/action_page.php" method="POST">
-      <label for="firstname">First Name</label>
-      <input type="text" id="firstname" name="firstname" required>
-
-      <label for="lastname">Last Name</label>
-      <input type="text" id="lastname" name="lastname" required>
-
-      <label for="email">E-mail Address</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="password">Password</label>
-      <input type="password" id="password" name="password" required>
-
-      <label for="re-password">Repeat Password</label>
-      <input type="password" id="re-password" name="re-password" required>
-
-      <input type="submit" value="Sign Up">
-    </form>
-
-    <a href="index.html" class="signup-btn">Already have an account? Log in</a>
-  </div>
-
 </body>
+
 </html>

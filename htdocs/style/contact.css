@@ -1,0 +1,96 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-image: url('../eyeglasses2.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #131313;
+  color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 70px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #00bcd4;
+}
+
+/* Hero with Floating Container */
+.contact-hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.contact-container {
+  max-width: 600px;
+  width: 100%;
+  padding: 40px;
+  background-color: rgba(19, 19, 19, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-container:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.8);
+}
+
+.contact-container h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #00bcd4;
+}
+
+.contact-container p {
+  font-size: 18px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: #f0f0f0;
+}
+
+.contact-info {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.contact-info p {
+  font-size: 18px;
+  margin: 8px 0;
+  color: #ddd;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #131313;
+  color: #fff;
+}
