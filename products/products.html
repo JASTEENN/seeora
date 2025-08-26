@@ -3,102 +3,129 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Grid Cards</title>
+  <title>Seeora products</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
-<style>
-    * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-}
-
-body {
-  padding: 20px;
-  background-color: #000000;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 50px;
-  padding: 100px;
-}
-
-.card {
-  background: #fff;
-  height:300px;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.2s;
-  border-radius: 40px;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card img {
-  width: 100%;
-  margin-top: 50px;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  object-position: center;
-  aspect-ratio: 10/ 4;
-}
-
-.card h3 {
-  padding: 15px;
-  font-size: 1.2em;
-  font-family: 'Montserrat';
-}
-
-.card p {
-  padding: 0 15px 15px;
-  font-size: 1.2em;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: #555;
-}
-
-.price {
-    margin-left: 110px;
-    margin-bottom: 20px;
-}
-
-</style>
-
 <body>
+  <header>
+    <h1><a href="index.html" class="logo">Seeora</a></h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+      </ul>
+    </nav>
+    <button class="cart-btn" onclick="toggleCart()">View Cart</button>
+  </header>
+
+  <h2 class="section-title">Men's Glasses</h2>
   <div class="grid-container">
     <div class="card">
-      <img src="eye1.jpg" alt="Item 1" />
+      <img src="eye1.jpg" alt="Senichisaku SENICHI7 C1" />
       <div class="card-content">
-        <h3>Item 1</h3>
+        <h3>MS 1</h3>
         <p class="description">Senichisaku SENICHI7 C1</p>
         <div class="price">₱450.00</div>
+        <button class="buy-button">Add to Cart</button>
       </div>
     </div>
     <div class="card">
-      <img src="eye2.jpg" alt="Item 2" />
+      <img src="eye2.jpg" alt="Classic Slim" />
       <div class="card-content">
-        <h3>Item 2</h3>
+        <h3>MS 2</h3>
         <p class="description">Classic Slim</p>
         <div class="price">₱500.00</div>
+        <button class="buy-button">Add to Cart</button>
       </div>
     </div>
     <div class="card">
-      <img src="eye3.jpg" alt="Item 3" />
+      <img src="eye3.jpg" alt="COASION Vintage Round Clear" />
       <div class="card-content">
-        <h3>Item 3</h3>
+        <h3>MS 3</h3>
         <p class="description">COASION Vintage Round Clear</p>
         <div class="price">₱500.00</div>
+        <button class="buy-button">Add to Cart</button>
       </div>
     </div>
-    <!-- Add more cards as needed -->
+    <div class="card">
+      <img src="eye7.jpg" alt="Black Narrow" />
+      <div class="card-content">
+        <h3>MS 4</h3>
+        <p class="description">Black Narrow</p>
+        <div class="price">₱550.00</div>
+        <button class="buy-button">Add to Cart</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="eye8.jpg" alt="Slim Black" />
+      <div class="card-content">
+        <h3>MS 5</h3>
+        <p class="description">Slim Black</p>
+        <div class="price">₱480.00</div>
+        <button class="buy-button">Add to Cart</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="eye9.jpg" alt="Gold Rimless" />
+      <div class="card-content">
+        <h3>MS 6</h3>
+        <p class="description">Gold Rimless</p>
+        <div class="price">₱700.00</div>
+        <button class="buy-button">Add to Cart</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="eye10.jpg" alt="Blue Rimless" />
+      <div class="card-content">
+        <h3>MS 7</h3>
+        <p class="description">Blue Rimless</p>
+        <div class="price">₱700.00</div>
+        <button class="buy-button">Add to Cart</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="eye11.jpg" alt="Black Rimless" />
+      <div class="card-content">
+        <h3>MS 8</h3>
+        <p class="description">Black Rimless</p>
+        <div class="price">₱750.00</div>
+        <button class="buy-button">Add to Cart</button>
+      </div>
+    </div>
   </div>
+
+  <h2 class="section-title">Women's Glasses</h2>
+  <div class="grid-container">
+    <div class="card">
+      <img src="eye4.jpg" alt="Elegant Rose Gold" />
+      <div class="card-content">
+        <h3>WS 1</h3>
+        <p class="description">Elegant Rose Gold</p>
+        <div class="price">₱550.00</div>
+        <button class="buy-button">Add to Cart</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="eye5.jpg" alt="Fashion Cat Eye" />
+      <div class="card-content">
+        <h3>WS 2</h3>
+        <p class="description">Coach Classic</p>
+        <div class="price">₱600.00</div>
+        <button class="buy-button">Add to Cart</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="eye6.jpg" alt="Oversized Retro" />
+      <div class="card-content">
+        <h3>WS 3</h3>
+        <p class="description">Seinna Pink</p>
+        <div class="price">₱620.00</div>
+        <button class="buy-button">Add to Cart</button>4
+      </div>
+    </div>
+  </div>
+  
 </body>
+
 </html>
  

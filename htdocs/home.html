@@ -8,6 +8,45 @@
   <link rel="stylesheet" href="style/styles.css">
 </head>
 
+<style>
+.card {
+  background: #fff;
+  height:350px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+  border-radius: 40px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  margin-top: 50px;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 10/ 4;
+}
+
+.card h3 {
+  padding: 15px;
+  font-size: 1.2em;
+  font-family: 'Montserrat';
+}
+
+.card p {
+  padding: 0 15px 15px;
+  font-size: 1.2em;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #555;
+}
+</style>
+
 <body>
   <header>
     <h1><a href="index.html" class="logo">Seeora</a></h1>
@@ -35,18 +74,40 @@
     <div class="grid-container">
       <div class="card">
         <img src="../products/eye1.jpg" alt="Classic Frame" />
-        <h3>Senichisaku SENICHI7 C1</h3>
-        <p class="price">₱450.00</p>
+        <h3>MS 1</h3>
+        <p class="description">Classic Slim</p>
+        <div class="price">₱450.00</div>
       </div>
       <div class="card">
-        <img src="../products/eye2.jpg" alt="Slim Eyewear" />
-        <h3>Classic Slim</h3>
-        <p class="price">₱500.00</p>
+      <img src="../products/eye2.jpg" alt="Classic Slim" />
+      <div class="card-content">
+        <h3>MS 2</h3>
+        <p class="description">Classic Slim</p>
+        <div class="price">₱500.00</div>
       </div>
-      <div class="card">
-        <img src="../products/eye3.jpg" alt="Vintage Eyewear" />
-        <h3>COASION Vintage Round Clear</h3>
-        <p class="price">₱500.00</p>
+    </div>
+    <div class="card">
+      <img src="../products/eye3.jpg" alt="COASION Vintage" />
+      <div class="card-content">
+        <h3>MS 3</h3>
+        <p class="description">COASION Vintage</p>
+        <div class="price">₱500.00</div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="../products/eye7.jpg" alt="Black Narrow" />
+      <div class="card-content">
+        <h3>MS 4</h3>
+        <p class="description">Black Narrow</p>
+        <div class="price">₱550.00</div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="../products/eye8.jpg" alt="Slim Black" />
+      <div class="card-content">
+        <h3>MS 5</h3>
+        <p class="description">Slim Black</p>
+        <div class="price">₱480.00</div>
       </div>
     </div>
   </section>
