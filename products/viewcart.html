@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Cart - Seeora</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1><a href="../htdocs/index.html" class="logo">Seeora</a></h1>
+    <nav>
+      <ul>
+        <li><a href="../htdocs/index.html">HOME</a></li>
+        <li><a href="../products.html">Products</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h2 class="section-title">Your Shopping Cart</h2>
+
+  <div id="cart-container">
+    <p id="empty-cart-message">Your cart is empty.</p>
+    <ul id="cart-items"></ul>
+
+    <div id="cart-summary">
+      <p>Total: ₱<span id="total-price">0.00</span></p>
+      <button id="checkout-btn">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <script>
+    // Function to get the cart from localStorage
+    function getCart() {
+      return JSON.parse(localStorage.getItem('cart')) || [];
+    }
+
+    // Function to save the cart to localStorage
+    function saveCart(cart) {
+      localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    // Function to update the cart display
+    function updateCart() {
+      const cart = getCart();
+      const cartItemsContainer = document.getElementById('cart-items');
+      const totalPriceElement = document.getElementById('total-price');
+      const emptyMessage = document.getElementById('empty-cart-message');
+      
+      // Clear the cart display first
+      cartItemsContainer.innerHTML = '';
+      
+      if (cart.length === 0) {
+        emptyMessage.style.display = 'block';
+        totalPriceElement.innerText = '0.00';
+        return;
+      } else {
+        emptyMessage.style.display = 'none';
+      }
+
+      let totalPrice = 0;
+
+      cart.forEach((item, index) => {
+        const li = document.createElement('li');
+        li.classList.add('cart-item');
+        li.innerHTML = `
+          <p>${item.name} - ₱${item.price}</p>
+          <button class="remove-item" data-index="${index}">Remove</button>
+        `;
+        cartItemsContainer.appendChild(li);
+        totalPrice += parseFloat(item.price.replace('₱', '').trim());
+      });
+
+      totalPriceElement.innerText = totalPrice.toFixed(2);
+    }
+
+    // Function to handle item removal
+    function removeItem(index) {
+      const cart = getCart();
+      cart.splice(index, 1); // Remove the item at the given index
+      saveCart(cart);
+      updateCart();
+    }
+
+    // Event listener to handle removing items from the cart
+    document.getElementById('cart-items').addEventListener('click', function(event) {
+      if (event.target.classList.contains('remove-item')) {
+        const index = event.target.getAttribute('data-index');
+        removeItem(index);
+      }
+    });
+
+    // Event listener for checkout button
+    document.getElementById('checkout-btn').addEventListener('click', function() {
+      alert('Proceeding to checkout...');
+    });
+
+    // Initialize the cart page on load
+    window.onload = updateCart;
+  </script>
+
+</body>
+</html>

@@ -1,8 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta http-equiv="refresh" content="0; url=home.html">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seeora | Home</title>
+  <link rel="stylesheet" href="style/styles.css">
 </head>
+
+<style>
+.card {
+  background: #fff;
+  height:350px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+  border-radius: 40px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  margin-top: 50px;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 10/ 4;
+}
+
+.card h3 {
+  padding: 15px;
+  font-size: 1.2em;
+  font-family: 'Montserrat';
+}
+
+.card p {
+  padding: 0 15px 15px;
+  font-size: 1.2em;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #555;
+}
+</style>
+
 <body>
+  <header>
+    <h1><a href="index.html" class="logo">Seeora</a></h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT US</a></li>
+        <li><a href="contact.html">CONTACTS</a></li>
+        <li><a href="../products/products.html">SHOP</a></li>
+        <li><a href="login.html">LOGIN</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>"When Style Meets Vision"</h2>
+      <p>Discover premium eyewear crafted for elegance, comfort, and clarity.</p>
+      <a href="../products/products.html" class="btn-cta">Shop Now</a>
+    </div>
+  </section>
+
+  <section class="featured">
+    <h2 class="section-title">Featured Eyewear</h2>
+    <div class="grid-container">
+      <div class="card">
+        <img src="../products/eye1.jpg" alt="Classic Frame" />
+        <h3>MS 1</h3>
+        <p class="description">Classic Slim</p>
+        <div class="price">₱450.00</div>
+      </div>
+      <div class="card">
+      <img src="../products/eye2.jpg" alt="Classic Slim" />
+      <div class="card-content">
+        <h3>MS 2</h3>
+        <p class="description">Classic Slim</p>
+        <div class="price">₱500.00</div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="../products/eye3.jpg" alt="COASION Vintage" />
+      <div class="card-content">
+        <h3>MS 3</h3>
+        <p class="description">COASION Vintage</p>
+        <div class="price">₱500.00</div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="../products/eye7.jpg" alt="Black Narrow" />
+      <div class="card-content">
+        <h3>MS 4</h3>
+        <p class="description">Black Narrow</p>
+        <div class="price">₱550.00</div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="../products/eye8.jpg" alt="Slim Black" />
+      <div class="card-content">
+        <h3>MS 5</h3>
+        <p class="description">Slim Black</p>
+        <div class="price">₱480.00</div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="../products/eye9.jpg" alt="Gold Rimless" />
+      <div class="card-content">
+        <h3>MS 6</h3>
+        <p class="description">Gold Rimless</p>
+        <div class="price">₱700.00</div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2025 Seeora. All Rights Reserved.</p>
+  </footer>
 </body>
+
 </html>
